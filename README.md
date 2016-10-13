@@ -28,7 +28,7 @@ This module takes "official" Slack archive tarballs and renders them as a flask 
 We again have a captive version of this package. I've modified it to play nicely with the
 less-than-official JSON formats produced above.
 
-It does have its own dependencies, which are not installed by `slacklogger` and you may have to install them:
+It does have its own dependencies, which are not installed by `slacklogger.sh` and you may have to install them:
 
 * click
 * flask
@@ -44,7 +44,7 @@ $ cd slacklogging
 $ chmod 777 slacklogger.sh
 ```
 
-Next run slacklogger with the setup flag:
+Next run `slacklogger.sh` with the setup flag:
 
 ```
 $ ./slacklogging.sh --setup
