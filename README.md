@@ -30,14 +30,10 @@ less-than-official JSON formats produced above.
 
 It does have its own dependencies, which are not installed by `slacklogger` and you may have to install them:
 
-click
-
-flask
-
-markdown2
-
-emoji
-
+* click
+* flask
+* markdown2
+* emoji
 
 # Setup
 
