@@ -31,7 +31,11 @@ def get_users(path):
     with open(os.path.join(path, "users.json")) as f:
         bod = json.load(f)['members']
     json.dump(bod, open(os.path.join(path, "users.json"),'w'))
-    return {u["id"]: u for u in bod}
+    ret = {}
+    for u in bod:
+        ret[u["name"]] =u
+        ret[u["id"]] = u
+    return ret
 
 
 def get_channels(path):

@@ -25,7 +25,7 @@ class Message(object):
     @property
     def username(self):
         try:
-            return self.__USER_DATA[self._message["user"]]["name"]
+            return self.__USER_DATA[self._message["user"]]["real_name"]
         except KeyError:
             # In case this is a bot or something, we fallback to "username"
             if "username" in self._message:
