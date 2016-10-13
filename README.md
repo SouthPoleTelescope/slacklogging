@@ -15,7 +15,7 @@ This module performs API calls to assemble JSON history files for public channel
 (https://www.npmjs.com/package/slack-history-export)
 
 We have a modified captive version of this module which is installed locally within the slacklogging folder.
-I've edited it to do some light preprocessing to make the rendering of the HTML easier.
+I've edited it to do some light preprocessing to make rendering the HTML easier.
 
 `slacklogger.sh` takes care of the installation and setup.
 
@@ -27,7 +27,7 @@ This module takes "official" Slack archive tarballs and renders them as a flask 
 (https://github.com/hfaran/slack-export-viewer)
 
 We again have a captive version of this package. I've modified it to play nicely with the
-less-than-official JSON formats produced above.
+less-than-official JSON formats produced above and fixed a few bugs.
 
 It does have its own dependencies, which are not installed by `slacklogger.sh` and you may have to install them:
 
