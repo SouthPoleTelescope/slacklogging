@@ -4,8 +4,23 @@ A set of tools shamelessly pilfered from others and tied together to perform bac
 
 # Dependencies
 
-This *should* be relatively self-contained.
-It uses modified versions of two different packages:
+* nodejs (tested with versions 4.6 through latest. Probably works on versions >4.x)
+
+```
+$ cd some/local/directory
+$ wget https://nodejs.org/download/release/latest/node-v6.8.0.tar.gz
+$ cd node-v6.8.0
+$ sudo ./configure
+$ sudo make install -j10
+```
+
+* Python packages click, flask, markdown2, and emoji
+
+```
+$ pip install click flask markdown2 emoji
+```
+
+You will also need a slack authentication `token`, which may be generated here: https://api.slack.com/web
 
 slack-history-export
 --------------------
@@ -17,7 +32,7 @@ This module performs API calls to assemble JSON history files for public channel
 We have a modified captive version of this module which is installed locally within the slacklogging folder.
 I've edited it to do some light preprocessing to make rendering the HTML easier.
 
-`slacklogger.sh` takes care of the installation and setup.
+This is a node module, so needs to be installed into/with nodejs. `slacklogger.sh --setup` takes care of this and must be run once.
 
 
 slack-export-viewer
@@ -29,16 +44,10 @@ This module takes "official" Slack archive tarballs and renders them as a flask 
 We again have a captive version of this package. I've modified it to play nicely with the
 less-than-official JSON formats produced above and fixed a few bugs.
 
-It does have its own dependencies, which are not installed by `slacklogger.sh` and you may have to install them:
-
-* click
-* flask
-* markdown2
-* emoji
 
 # Setup
 
-After cloning this repo you must first edit the `slacklogger.sh` file to be executible:
+After cloning this repo you make sure `slacklogger.sh` file is executible. If not:
 
 ```
 $ cd slacklogging
@@ -50,9 +59,6 @@ Next run `slacklogger.sh` with the setup flag:
 ```
 $ ./slacklogging.sh --setup
 ```
-
-All messages related to this process can be found in the `slacklogging/setup.log` file.
-
 
 # Usage
 
@@ -68,5 +74,14 @@ $ ./slacklogger.sh -t token -o ~/Desktop/slacklogger_test_dir
 
 Where `token` is a file containing the Slack API token string.
 This can be generated here: https://api.slack.com/web
+
+Debugging
+---------
+
+`npm ERR! Error: failed to fetch from registry:`
+This usually means your linux distribution is very old and therefore your version of nodejs is <4.x (with npm version <1.x).
+
+You should install a more recent version of nodejs from source as written above in the dependencies section.
+
 
 
