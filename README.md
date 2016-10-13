@@ -79,6 +79,7 @@ Debugging
 ---------
 
 `npm ERR! Error: failed to fetch from registry:`
+
 This usually means your linux distribution is very old and therefore your version of nodejs is <4.x (with npm version <1.x).
 
 You should install a more recent version of nodejs from source as written above in the dependencies section.
