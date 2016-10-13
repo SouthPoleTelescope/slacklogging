@@ -119,7 +119,7 @@ if ( $setup )
 		apt-get -y install nodejs 1>${DIR}/setup3.log 2>&1
 		wget -qO- https://deb.nodesource.com/setup_6.x | bash - 1>${DIR}/setup4.log 2>&1
 		apt-get -y install nodejs 1>${DIR}/setup5.log 2>&1
-		npm install npm -g 1>${DIR}/setup6.log 2>&1
+		npm install npm 1>${DIR}/setup6.log 2>&1
 		cd ${DIR}/slack-history-export
 	  	npm install . 1>${DIR}/setup7.log 2>&1
 	printf "\n"
