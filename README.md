@@ -17,7 +17,7 @@ This module performs API calls to assemble JSON history files for public channel
 We have a modified captive version of this module which is installed locally within the slacklogging folder.
 I've edited it to do some light preprocessing to make the rendering of the HTML easier.
 
-`slacklogger` takes care of the installation and setup.
+`slacklogger.sh` takes care of the installation and setup.
 
 
 slack-export-viewer
