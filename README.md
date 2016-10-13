@@ -1,5 +1,6 @@
 # slacklogging
-A capture of tools and script to generate static HTML pages of the team slack history
+
+A set of tools shamelessly pilfered from others and tied together to perform backups of public Slack channel logs in the form of static HTML pages.
 
 # Dependencies
 
