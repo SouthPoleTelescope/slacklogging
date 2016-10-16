@@ -47,7 +47,7 @@ less-than-official JSON formats produced above and fixed a few bugs.
 
 # Setup
 
-After cloning this repo you make sure `slacklogger.sh` file is executible. If not:
+After cloning this repo make sure `slacklogger.sh` file is executible. If not:
 
 ```
 $ cd slacklogging
