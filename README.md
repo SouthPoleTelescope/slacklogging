@@ -75,6 +75,11 @@ $ ./slacklogger.sh -t token -o ~/Desktop/slacklogger_test_dir
 Where `token` is a file containing the Slack API token string.
 This can be generated here: https://api.slack.com/web
 
+Example Page
+------------
+![wow so productive](example.png?raw=true "Example Channel Page")
+
+
 Debugging
 ---------
 
