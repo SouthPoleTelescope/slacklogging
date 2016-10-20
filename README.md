@@ -57,7 +57,7 @@ $ chmod 777 slacklogger.sh
 Next run `slacklogger.sh` with the setup flag:
 
 ```
-$ ./slacklogging.sh --setup
+$ ./slacklogger.sh --setup
 ```
 
 # Usage
